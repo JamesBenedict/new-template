@@ -3,7 +3,7 @@
 }
 
 /*fonts*/
-h2, hg, h4, h5, figcaption{
+h2, h3, h4, h5, figcaption{
 	font-family: 'Lato', sans-serif;
 	}
 
@@ -32,8 +32,6 @@ h4{
 }
 
 
-
-
 h6{
 	opacity: .6;
 	font-size: 1em;
@@ -47,8 +45,15 @@ p{
 	margin-bottom: 1em;
 }
 
-.aside p{
+aside p{
 	font-weight: bold;
+}
+
+a{
+	color: black;
+}
+a:hover{
+	color: black;
 }
 
 .bold{
@@ -200,24 +205,15 @@ aside h6{
 
 aside.pulled-quote{
 	margin-bottom: 2em;
-	margin-top: 1em;
+	margin-top: 0em;
+}
+aside h1{
+	font-size: 1.5em;
+	margin-top: .5em;
 }
 
-.inline-left.pulled-quote{
-	text-align: right;
-}
-
-.inline-left >.share{
-	float: right;
-	
 
 
-}
-
-.inline-left> h5{
-	float: right;
-
-}
 
 .wide-left.pulled-quote{
 	text-align: right;
@@ -276,6 +272,73 @@ table td:nth-child(1) {
     font-weight: bold;
 }
 
+.inline-left > hr:first-child{
+	margin-top: 1em;
+}
+
+.inline-right > hr:first-child{
+	margin-top: 1em;
+}
+.inline-left >.share{
+	float: right;
+}
+
+.inline-left{
+	float: left;
+	width: 30%;
+	margin-right: .5em;
+	margin-top: 0em;
+	margin-right: 2.5em;
+	text-align: right;
+
+}
+
+.inline-left h2{
+	font-size: 1.25em;
+	margin-top: 0em;
+}
+
+.inline-left> h5{
+	width: 100%;
+	text-align: right;
+
+}
+
+.inline-left h6{
+	font-size: .75em;
+}
+
+.inline-left > .share{
+	width: 100%;
+}
+.inline-left > .share img{
+	float: right;
+	margin-bottom: .5em;
+}
+
+
+.inline-right h2{
+	font-size: 1.25em;
+	margin-top: 0em;
+}
+
+.inline-right h6{
+	font-size: .75em;
+}
+
+.inline-right > .share{
+	width: 100%;
+}
+.inline-right > .share img{
+	float: left;
+	margin-bottom: .5em;
+}
+
+.share{
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+
 @media screen and (max-width: 480px) {
 /*This media query is only really useful for tables*/
 table,
@@ -331,6 +394,42 @@ br{
 /* Small Devices, Tablets */
 @media only screen and (min-width : 640px) {
 
+.inline-left h2{
+	font-size: 2em;
+	margin-top: 0em;
+}
+
+.inline-left h6{
+	font-size: 1em;
+}
+
+.inline-left > .share{
+	width: 100%;
+}
+.inline-left > .share img{
+	float: right;
+	margin-bottom: .5em;
+}
+
+
+.inline-right h2{
+	font-size: 2em;
+	margin-top: 0em;
+}
+
+.inline-right h6{
+	font-size: 1em;
+}
+
+.inline-right > .share{
+	width: 100%;
+}
+.inline-right > .share img{
+	float: left;
+	margin-bottom: .5em;
+}
+
+
 .wide{
 	width: 150%;
 	margin-left: -25%;
@@ -342,16 +441,9 @@ br{
 }
 
 
-.inline-left{
-	float: left;
-	width: 50%;
-	margin-right: 2em;
-}
-
-
 .inline-right{
 	float: right;
-	width: 50%;
+	width: 30%;
 	margin-left: 2em;
 	margin-top: 1em;
 }
@@ -445,14 +537,14 @@ video{
 @media only screen and (min-width : 992px) {
 .wide-left{
 	float: left;
-	width: 70%;
+	width: 60%;
 	margin-left: -30%;
 	margin-right: 1em;
 }
 
 .wide-right{
 	float: right;
-	width: 70%;
+	width: 60%;
 	margin-right: -30%;
 	margin-left: 2em;
 }

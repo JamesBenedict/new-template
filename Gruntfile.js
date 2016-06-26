@@ -23,7 +23,7 @@ module.exports = function(grunt) {
       },
 
       // when this task is run, lint the Gruntfile and all js files in src
-      build: ['Gruntfile.js', 'src/custom/*.js']
+      build: ['Gruntfile.js', 'src/js/custom/*.js']
     },
 
     uglify: {
@@ -32,9 +32,10 @@ module.exports = function(grunt) {
       },
 
       build: {
-        files: {
-          'src/js/app.min.js': ['src/js/jquery-2.1.4.min.js', 'src/js/bootstrap.min.js', 'src/js/*.js']
-        }
+        files: [
+        {'dist/js/app.min.js': ['src/js/jquery-2.1.4.min.js', 'src/js/bootstrap.min.js', 'src/js/*.js']},
+        {'src/js/app.min.js': ['src/js/jquery-2.1.4.min.js', 'src/js/bootstrap.min.js', 'src/js/*.js']},
+        ],
       }
     },
 
@@ -43,17 +44,22 @@ module.exports = function(grunt) {
         banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n'
       },
       build: {
-        files: {
-          'src/css/style.min.css': ['src/css/reset.css', 'src/css/bootstrap.min.css','src/css/style.css', 'src/css/navbar.css']
-        }
+        files:[
+          {'dist/css/style.min.css': ['src/css/reset.css', 'src/css/bootstrap.min.css','src/css/style.css', 'src/css/navbar.css']},
+          {'src/css/style.min.css': ['src/css/reset.css', 'src/css/bootstrap.min.css','src/css/style.css', 'src/css/navbar.css']},
+        ],
       }
     },
 
     copy: {
       main: {
-        expand: true,
-        src: 'src/',
-        dest: 'dest/',
+        files:[
+          {expand: true, flatten: true, src: ['src/img/**'], dest: 'dist/img', filter: 'isFile'},
+          {expand: true, flatten: true, src: ['src/html/**'], dest: 'dist/html', filter: 'isFile'},
+          {expand: true, flatten: true, src: ['src/fonts/**'], dest: 'dist/fonts', filter: 'isFile'},
+
+
+        ],
       },
     },
 
@@ -69,12 +75,18 @@ module.exports = function(grunt) {
       // for scripts, run jshint and uglify 
       scripts: { 
         files: 'src/**/*.js', tasks: ['jshint', 'uglify'] 
-      } 
+      },
+
+      scripts: { 
+        files: ['src/**/*.html', 'src/**/*.png', 'src/**/*.svg', 'src/**/*.jpg', 'src/**/*.gif', 'src/**/*.mp4', 'src/**/*.mp3', 'src/font/**'], tasks: ['copy'],
+        tasks: ['copy'] 
+      },
+
     }
   });
 
-  grunt.registerTask('default', ['uglify', 'cssmin', 'watch']);
-  grunt.registerTask('dev', ['jshint']);
+  grunt.registerTask('default', ['uglify', 'cssmin', 'copy', 'watch']);
+  grunt.registerTask('dev', ['copy']);
 
 
 

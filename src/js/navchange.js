@@ -18,7 +18,7 @@ $(document).ready(function(){
           $(".twitter-logo").html("<img src='../img/b.twitter.svg'>");
           $(".fb-logo").html("<img src='../img/b.facebook.svg'>");
           $(".nav-headline").css('color', 'black');
-          $(".nav-headline").html('Responsive Template');
+          $(".nav-headline").html('Responsive Template Guide');
 
 
 

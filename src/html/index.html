@@ -30,9 +30,17 @@
 </head>
 <body>
 
+
 <figure class="img-responsive center-block lead-img">
 	<img src="../img/test.jpg"  alt="">
+	<h1>This is the first option to lead a story</h1>
+	<h2>With an optional subhead</h2>
+	<h6>By <a href="https://twitter.com/jamesgbenedict">James Benedict</h6></a>
+	<h6 class="date">Published Today</h6>
 </figure>
+
+
+
 <div id="startchange"></div>
 
 
@@ -60,7 +68,7 @@
     </div> <!-- end of navbar-collapse -->
   </div> <!-- end of confiner-fluid for nav -->
 
-  </nav>
+</nav>
 
 
 
@@ -69,9 +77,9 @@
 	
 	<div class="row intro">
 		<div class="col-md-offset-1 col-md-10">
-			<h1>This is a test headline</h1>
-			<h2>With a subhead</h2>
-			<h6>By James Benedict</h6>
+			<h1>This is the second </h1>
+			<h2>With an optional subhead</h2>
+			<h6>By <a href="https://twitter.com/jamesgbenedict">James Benedict</a></h6>
 			<h6 class='date'>Published Today</h6>
 
 		</div>
@@ -80,32 +88,72 @@
 		</figure>
 	</div> <!-- end of intro row -->
 
-	
-
-	
-	
-
-		
-
 	<div class="row article">
-		<div class="col-sm-8 col-sm-offset-2  col-md-6 col-md-offset-3">
-			
-			
-			
-			<h1>Fonts</h1>
-				<p><span class="dropcap">T</span>his is a dropcap, and the rest of the text is a paragraph. There is also <b>bold</b> and <em>italic</em>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare egestas mi at elementum. Curabitur consectetur magna congue, tempus ante malesuada, laoreet libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque tristique efficitur sagittis.  </p>
 
-				<h1>H1 Headline</h1>
-				<h2>H2 for subheads and graphic headlines</h2>
-				<h3>H3 is for section heads</code></h3>
-				<h4>h4 is up for grabs</h4>
-				<h5>H5 for graphics</h5>
-				<h6>H6 is used for byline
-				<h6 class="date"> H6 with the <code>.date</code> class is used for dates in byline </h6>
-				<figcaption>This is a figcaption</figcaption>
-				
-				
-		</div> <!-- end of fonts/dropcap column -->
+		<div class="col-sm-8 col-sm-offset-2  col-md-6 col-md-offset-3">
+			<p>Either lead works depending on what type of visual you have. If it is strong, I often recommend starting with lead-img. If it needs to be smaller, use the headline lead. </p>
+			<p>This is for the first lead-img example</p>
+<pre>
+&lt;body&gt; 
+
+&lt;figure class=&quot;img-responsive center-block lead-img&quot;&gt;
+	&lt;img src= &quot;&quot;  alt=&quot;&quot;&gt;
+	&lt;h1&gt; &lt;/h1&gt;
+	&lt;h2&gt; &lt;/h2&gt;
+	&lt;h6&gt; &lt;/h6&gt;
+	&lt;h6 class=&quot;date&quot;&gt; &lt;/h6&gt;
+&lt;/figure&gt;
+
+&lt;div id=&quot;startchange&quot;&gt;&lt;/div&gt; &lt;!--this is a empty div used to trigger javascript--&gt;
+
+&lt;nav&gt;...your nav bar code goes in here... &lt;/nav&gt;
+
+...followed by the rest of your page &lt;/body&gt;
+</pre>
+		<p>This is for the second lead-headline example. You can replace the <code>center-block</code> part of the code below to change the size of the image. Read the image section of the documentation to figure it out.</p>
+<pre>
+&lt;body&gt; 
+&lt;nav&gt;...&lt;/nav&gt;
+&lt;div class=&quot;container-fluid&quot;&gt;&lt;!-- This needs to be wrapped around your lead, if you are confused read bootstrap's documentation --&gt;
+	
+	&lt;div class=&quot;row intro&quot;&gt;
+		&lt;div class=&quot;col-md-offset-1 col-md-10&quot;&gt;
+			&lt;h1&gt; &lt;/h1&gt;
+			&lt;h2&gt; &lt;/h2&gt;
+			&lt;h6&gt; &lt;/h6&gt;
+			&lt;h6 class='date'&gt; &lt;/h6&gt;
+
+		&lt;/div&gt;
+		&lt;figure class=&quot;img-responsive center-block&quot;&gt;
+			&lt;img src=&quot; &quot;  alt=&quot;&quot;&gt;
+		&lt;/figure&gt;
+	&lt;/div&gt; &lt;!-- end of intro row --&gt;
+
+...rest of your page 
+...&lt;/div&gt; &lt;!-- end of container fluid --&gt;
+...&lt;/body&gt;
+</pre>
+
+	</div>
+	<div class="col-sm-8 col-sm-offset-2  col-md-6 col-md-offset-3">
+		
+			
+			
+			<p><span class="dropcap">T</span>his is a dropcap, and the rest of the text is a paragraph. There is also <b>bold</b> and <em>italic</em>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare egestas mi at elementum. Curabitur consectetur magna congue, tempus ante malesuada, laoreet libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque tristique efficitur sagittis.  </p>
+
+			<h1>H1 Headline</h1>
+			<h2>H2 for subheads and graphic headlines</h2>
+			<h3>H3 is for section heads</code></h3>
+			<h4>h4 is up for grabs</h4>
+			<h5>H5 for graphics</h5>
+			<h6>H6 is used for byline
+			<h6 class="date"> H6 with the <code>.date</code> class is used for dates in byline </h6>
+			<figcaption>This is a figcaption</figcaption>
+
+			<hr>
+			
+			
+	</div> <!-- end of fonts/dropcap column -->
  
 	</div> <!-- end of row -->
 
@@ -113,7 +161,7 @@
 		<div class="inline">
 			<h1>Images</h1>
 
-			<p>All images should be place inside figures. Use jpg, gif, or link from a CMS to the image as your image source. The following classes are a layout starting point that can be tweaked by adding an id or changed throughout the article by changing the class. For more options place a image inside a <code>figure</code> inside a column using the <a href="http://getbootstrap.com/css/#grid">bootstrap grid system</a>.</p>
+			<p>All images should be place inside a <code>figure</code>. Use jpg, gif, or link from a CMS to the image as your image source. The following classes are a layout starting point that can be tweaked by adding an id or changed throughout the article by changing the class. For more layout options place figure inside a column using the <a href="http://getbootstrap.com/css/#grid">bootstrap grid system</a>.</p>
 
 			
 			<h3>Inline image</h3>

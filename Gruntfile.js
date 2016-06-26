@@ -33,8 +33,8 @@ module.exports = function(grunt) {
 
       build: {
         files: [
-        {'dist/js/app.min.js': ['src/js/jquery-2.1.4.min.js', 'src/js/bootstrap.min.js', 'src/js/*.js']},
-        {'src/js/app.min.js': ['src/js/jquery-2.1.4.min.js', 'src/js/bootstrap.min.js', 'src/js/*.js']},
+        {'dist/js/app.min.js': ['src/js/jquery-2.1.4.min.js', 'src/js/bootstrap.js', 'src/js/*.js']},
+        {'src/js/production/app.min.js': ['src/js/jquery-2.1.4.min.js', 'src/js/bootstrap.js', 'src/js/*.js']},
         ],
       }
     },
@@ -45,8 +45,8 @@ module.exports = function(grunt) {
       },
       build: {
         files:[
-          {'dist/css/style.min.css': ['src/css/reset.css', 'src/css/bootstrap.min.css','src/css/style.css', 'src/css/navbar.css']},
-          {'src/css/style.min.css': ['src/css/reset.css', 'src/css/bootstrap.min.css','src/css/style.css', 'src/css/navbar.css']},
+          {'dist/css/style.min.css': ['src/css/reset.css', 'src/css/bootstrap.css','src/css/style.css', 'src/css/navbar.css']},
+          {'src/css/production/style.min.css': ['src/css/reset.css', 'src/css/bootstrap.css','src/css/style.css', 'src/css/navbar.css']},
         ],
       }
     },
@@ -69,18 +69,18 @@ module.exports = function(grunt) {
       },
       // for stylesheets, watch css and less files 
       // only run less and cssmin stylesheets: { 
-      files: ['src/css/custom/*.css'], 
+      files: ['src/css/*.css'], 
       tasks: ['cssmin'],
 
       // for scripts, run jshint and uglify 
       scripts: { 
-        files: 'src/**/*.js', tasks: ['jshint', 'uglify'] 
+        files: 'src/js/*.js', tasks: ['jshint', 'uglify'] 
       },
 
-      scripts: { 
-        files: ['src/**/*.html', 'src/**/*.png', 'src/**/*.svg', 'src/**/*.jpg', 'src/**/*.gif', 'src/**/*.mp4', 'src/**/*.mp3', 'src/font/**'], tasks: ['copy'],
-        tasks: ['copy'] 
-      },
+      // scripts: { 
+      //   files: ['src/**/*.html', 'src/**/*.png', 'src/**/*.svg', 'src/**/*.jpg', 'src/**/*.gif', 'src/**/*.mp4', 'src/**/*.mp3', 'src/font/**'], tasks: ['copy'],
+      //   tasks: ['copy'] 
+      // },
 
     }
   });

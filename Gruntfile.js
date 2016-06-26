@@ -33,8 +33,8 @@ module.exports = function(grunt) {
 
       build: {
         files: [
-        {'dist/js/app.min.js': ['src/js/jquery-2.1.4.min.js', 'src/js/bootstrap.js', 'src/js/*.js']},
-        {'src/js/production/app.min.js': ['src/js/jquery-2.1.4.min.js', 'src/js/bootstrap.js', 'src/js/*.js']},
+        {'dist/js/app.min.js': ['src/js/jquery-2.1.4.min.js', 'src/js/alignment.js', 'src/js/bootstrap.js', 'src/js/*.js']},
+        {'src/js/production/app.min.js': ['src/js/jquery-2.1.4.min.js', 'src/js/alignment.js', 'src/js/bootstrap.js', 'src/js/*.js']},
         ],
       }
     },

@@ -91,6 +91,7 @@
 	<div class="row article">
 
 		<div class="col-sm-8 col-sm-offset-2  col-md-6 col-md-offset-3">
+			<h1>Leads and fonts</h1>
 			<p>Either lead works depending on what type of visual you have. If it is strong, I often recommend starting with lead-img. If it needs to be smaller, use the headline lead. </p>
 			<p>This is for the first lead-img example</p>
 <pre>
@@ -135,7 +136,7 @@
 </pre>
 
 	</div>
-	<div class="col-sm-8 col-sm-offset-2  col-md-6 col-md-offset-3">
+	<div class="inline">
 		
 			
 			
@@ -156,6 +157,58 @@
 	</div> <!-- end of fonts/dropcap column -->
  
 	</div> <!-- end of row -->
+	<div class="row">
+		<div class="inline">
+			<h1>Alignment</h1>
+
+			<p>The template is here to streamline designing longform responsive articles. It is not a rigid style guide, rules here are meant to be broken. There are three general places to layout your content <code>inline</code>, <code>aside</code> and <code>break</code>. Each of these will be explained later in this section.</p>
+
+			<h3>Bootstap</h3>
+			<p>This template is developed ontop of bootstrap. If you are unfamilar, read their <a href="http://getbootstrap.com/css/">documentation</a> first. Essentially everything is built on a twelve column grid. You set any element's width by changing the number of columns you want it to span. You can also automatically change this number dependng on the size of the screen. For example <code>col-sm-12 col-md-6</code> will make an element the full width when the screen at a small size and half width when it is a medium size. There are four sizes, <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>. Bootstrap defaults to the smallest defined size, so if an element is <code>col-xs-12</code>, then it will be 12 columns at all sizes.</p>
+
+			<p>You can also <a href="http://getbootstrap.com/css/#grid-nesting">nest</a> columns inside of each other. If I have an element that is always half the screen (6 columns), I can then nest something 12 columns wide inside that. This will make the second element always equal to the width of the first. If the second element had been set to six columns, it would be half the first element or a quarter of the page width.</p>
+
+			<p>Each group of columns is wrapped in a <code>row</code>. If I have two 12 column elements in one row they will be stacked ontop of each other. If I have two six column elements they will float left and fill one line. There is no limit on column inside a row. Tracking how things float around each other gets confusing, rows provide a way to organize columns you always want together.</p>
+
+			<p>A group of rows is wrapped by the <code>container-fluid</code>. You will likely never have to modify this class because it is mainly used by bootstrap to help calculate the correct size all children elements should be. However, it also keeps things from going full screen. For some alignments below you will have to make sure you open and close the container fluid properly.</p>
+
+			<p>Bootstrap's grid has many more options than this, so if you are unfamiliar <a href="http://getbootstrap.com/css/">read the manual</a>. This package will already have bootstrap installed so you can skip the getting started page if you want.</p> 
+
+			<h3>Inline</h3>
+			<p>The main column that this text is in is call <code>inline</code>. It is the equivalent of <code>col-sm-8 col-sm-offset-2  col-md-6 col-md-offset-3</code> in bootstrap's grid, but takes less time to write. Throughout the rest of the documentation there will be plenty of options showing you inline elements, but the following code will demonstrate where the <code>inline</code> column goes in relation to the <code>row</code> and <code>container-fluid</code>.</p>
+<pre>
+&lt;body&gt;
+...navigation, lead image, etc...
+
+&lt;div class=&quot;container-fluid&quot;&gt;
+	&lt;div class=&quot;row&quot;&gt;
+
+		&lt;div class=&quot;inline&quot;&gt;
+			&lt;p&gt;...&lt;/p&gt;
+			&lt;figure&gt;
+				&lt;img src=&quot;...&quot;&gt;
+				&lt;figcaption&gt;...&lt;/figcaption&gt;
+			&lt;/figure&gt;
+			...any other content you want in this column goes here			
+		&lt;/div&gt; &lt;!--  end of inline --&gt;
+
+	&lt;/div&gt; &lt;!--  end of row --&gt;
+&lt;/div&gt; &lt;!--  end of container-fluid --&gt;
+
+&lt;/body&gt;
+</pre>
+
+
+
+
+
+
+
+
+
+
+		</div>
+	</div>
 
 	<div class="row">
 		<div class="inline">

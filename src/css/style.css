@@ -28,7 +28,6 @@ h2{
 
 
 h3{
-	font-family: 'Roboto Slab', serif;
 	font-size: 2em;
 	line-height: 1.5em;
 	margin-top: 1em;
@@ -57,7 +56,7 @@ p{
 	font-size: 18px;
 	line-height: 1.5em;
 	font-weight: 300;
-	margin-top: 1em;
+	margin-top: .5em;
 }
 
 aside p{

@@ -15,10 +15,13 @@
 	
 	<title>New-template</title>
 
-	<!-- <link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css"> -->
-	<link rel="stylesheet" href="../css/production/style.min.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link rel="stylesheet" href="../css/style.css">
 
+
+<!-- 	<link rel="stylesheet" href="../css/production/style.min.css">
+ -->
 	<!-- FONTS -->
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300|Lato|Lora' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
@@ -27,9 +30,17 @@
 </head>
 <body>
 
+
 <figure class="img-responsive center-block lead-img">
-	<img src="../img/test.jpg"  alt="">
+	<img src="../img/test.jpg"  alt="" data-lightbox="image-1" data-title="My caption">
+	<h1>This is the first option to lead a story</h1>
+	<h2>With an optional subhead</h2>
+	<h6>By <a href="https://twitter.com/jamesgbenedict">James Benedict</h6></a>
+	<h6 class="date">Published Today</h6>
 </figure>
+
+
+
 <div id="startchange"></div>
 
 
@@ -57,7 +68,7 @@
     </div> <!-- end of navbar-collapse -->
   </div> <!-- end of confiner-fluid for nav -->
 
-  </nav>
+</nav>
 
 
 
@@ -66,49 +77,147 @@
 	
 	<div class="row intro">
 		<div class="col-md-offset-1 col-md-10">
-			<h1>This is a test headline</h1>
-			<h2>With a subhead</h2>
-			<h6>By James Benedict</h6>
+			<h1>This is the second </h1>
+			<h2>With an optional subhead</h2>
+			<h6>By <a href="https://twitter.com/jamesgbenedict">James Benedict</a></h6>
+			<h6 class='date'>Published Today</h6>
+
 		</div>
 		<figure class="img-responsive center-block">
-			<img src="../img/test2.jpg"  alt="">
+			<img src="../img/test2.jpg"  alt="" data-lightbox="image-2" data-title="My caption">
 		</figure>
 	</div> <!-- end of intro row -->
 
-	
-
-	
-	
-
-		
-
 	<div class="row article">
+
 		<div class="col-sm-8 col-sm-offset-2  col-md-6 col-md-offset-3">
-			<p><span class="dropcap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare egestas mi at elementum. Curabitur consectetur magna congue, tempus ante malesuada, laoreet libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque tristique efficitur sagittis. Nullam at mi mi.  </p>
+			<h1>Leads and fonts</h1>
+			<p>Either lead works depending on what type of visual you have. If it is strong, I often recommend starting with lead-img. If it needs to be smaller, use the headline lead. </p>
+			<p>This is for the first lead-img example</p>
+<pre>
+&lt;body&gt; 
+
+&lt;figure class=&quot;img-responsive center-block lead-img&quot;&gt;
+	&lt;img src= &quot;&quot;  alt=&quot;&quot;&gt;
+	&lt;h1&gt; &lt;/h1&gt;
+	&lt;h2&gt; &lt;/h2&gt;
+	&lt;h6&gt; &lt;/h6&gt;
+	&lt;h6 class=&quot;date&quot;&gt; &lt;/h6&gt;
+&lt;/figure&gt;
+
+&lt;div id=&quot;startchange&quot;&gt;&lt;/div&gt; &lt;!--this is a empty div used to trigger javascript--&gt;
+
+&lt;nav&gt;...your nav bar code goes in here... &lt;/nav&gt;
+
+...followed by the rest of your page &lt;/body&gt;
+</pre>
+		<p>This is for the second lead-headline example. You can replace the <code>center-block</code> part of the code below to change the size of the image. Read the image section of the documentation to figure it out.</p>
+<pre>
+&lt;body&gt; 
+&lt;nav&gt;...&lt;/nav&gt;
+&lt;div class=&quot;container-fluid&quot;&gt;&lt;!-- This needs to be wrapped around your lead, if you are confused read bootstrap's documentation --&gt;
+	
+	&lt;div class=&quot;row intro&quot;&gt;
+		&lt;div class=&quot;col-md-offset-1 col-md-10&quot;&gt;
+			&lt;h1&gt; &lt;/h1&gt;
+			&lt;h2&gt; &lt;/h2&gt;
+			&lt;h6&gt; &lt;/h6&gt;
+			&lt;h6 class='date'&gt; &lt;/h6&gt;
+
+		&lt;/div&gt;
+		&lt;figure class=&quot;img-responsive center-block&quot;&gt;
+			&lt;img src=&quot; &quot;  alt=&quot;&quot;&gt;
+		&lt;/figure&gt;
+	&lt;/div&gt; &lt;!-- end of intro row --&gt;
+
+...rest of your page 
+...&lt;/div&gt; &lt;!-- end of container fluid --&gt;
+...&lt;/body&gt;
+</pre>
+
+	</div>
+	<div class="inline">
+		
 			
 			
-			<h4>Fonts</h4>
-				<h1>H1 Headline</h1>
-				<h2>H2 for subheads</h2>
-				<h3>H3 for for graphic/aside headlines</h3>
-				<h4>H4 for section heads</h4>
-				<h5>H5 for graphics</h5>
-				<h6>H6 is used for byline</h6>
-				<p>p for paragraph</p>
-				<p><span class="bold">this is a bold span class</span></p>
-				<figcaption>This is a figcaption</figcaption>
-		</div> <!-- end of fonts/dropcap column -->
+			<p><span class="dropcap">T</span>his is a dropcap, and the rest of the text is a paragraph. There is also <b>bold</b> and <em>italic</em>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare egestas mi at elementum. Curabitur consectetur magna congue, tempus ante malesuada, laoreet libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque tristique efficitur sagittis.  </p>
+
+			<h1>H1 Headline</h1>
+			<h2>H2 for subheads and graphic headlines</h2>
+			<h3>H3 is for section heads</code></h3>
+			<h4>h4 is up for grabs</h4>
+			<h5>H5 for graphics</h5>
+			<h6>H6 is used for byline
+			<h6 class="date"> H6 with the <code>.date</code> class is used for dates in byline </h6>
+			<figcaption>This is a figcaption</figcaption>
+
+			<hr>
+			
+			
+	</div> <!-- end of fonts/dropcap column -->
  
 	</div> <!-- end of row -->
+	<div class="row">
+		<div class="inline">
+			<h1>Alignment</h1>
+
+			<p>The template is here to streamline designing longform responsive articles. It is not a rigid style guide, rules here are meant to be broken. There are three general places to layout your content <code>inline</code>, <code>aside</code> and <code>break</code>. Each of these will be explained later in this section.</p>
+
+			<h3>Bootstap</h3>
+			<p>This template is developed ontop of bootstrap. If you are unfamilar, read their <a href="http://getbootstrap.com/css/">documentation</a> first. Essentially everything is built on a twelve column grid. You set any element's width by changing the number of columns you want it to span. You can also automatically change this number dependng on the size of the screen. For example <code>col-sm-12 col-md-6</code> will make an element the full width when the screen at a small size and half width when it is a medium size. There are four sizes, <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>. Bootstrap defaults to the smallest defined size, so if an element is <code>col-xs-12</code>, then it will be 12 columns at all sizes.</p>
+
+			<p>You can also <a href="http://getbootstrap.com/css/#grid-nesting">nest</a> columns inside of each other. If I have an element that is always half the screen (6 columns), I can then nest something 12 columns wide inside that. This will make the second element always equal to the width of the first. If the second element had been set to six columns, it would be half the first element or a quarter of the page width.</p>
+
+			<p>Each group of columns is wrapped in a <code>row</code>. If I have two 12 column elements in one row they will be stacked ontop of each other. If I have two six column elements they will float left and fill one line. There is no limit on column inside a row. Tracking how things float around each other gets confusing, rows provide a way to organize columns you always want together.</p>
+
+			<p>A group of rows is wrapped by the <code>container-fluid</code>. You will likely never have to modify this class because it is mainly used by bootstrap to help calculate the correct size all children elements should be. However, it also keeps things from going full screen. For some alignments below you will have to make sure you open and close the container fluid properly.</p>
+
+			<p>Bootstrap's grid has many more options than this, so if you are unfamiliar <a href="http://getbootstrap.com/css/">read the manual</a>. This package will already have bootstrap installed so you can skip the getting started page if you want.</p> 
+
+			<h3>Inline</h3>
+			<p>The main column that this text is in is call <code>inline</code>. It is the equivalent of <code>col-sm-8 col-sm-offset-2  col-md-6 col-md-offset-3</code> in bootstrap's grid, but takes less time to write. Throughout the rest of the documentation there will be plenty of options showing you inline elements, but the following code will demonstrate where the <code>inline</code> column goes in relation to the <code>row</code> and <code>container-fluid</code>.</p>
+<pre>
+&lt;body&gt;
+...navigation, lead image, etc...
+
+&lt;div class=&quot;container-fluid&quot;&gt;
+	&lt;div class=&quot;row&quot;&gt;
+
+		&lt;div class=&quot;inline&quot;&gt;
+			&lt;p&gt;...&lt;/p&gt;
+			&lt;figure&gt;
+				&lt;img src=&quot;...&quot;&gt;
+				&lt;figcaption&gt;...&lt;/figcaption&gt;
+			&lt;/figure&gt;
+			...any other content you want in this column goes here			
+		&lt;/div&gt; &lt;!--  end of inline --&gt;
+
+	&lt;/div&gt; &lt;!--  end of row --&gt;
+&lt;/div&gt; &lt;!--  end of container-fluid --&gt;
+
+&lt;/body&gt;
+</pre>
+
+
+
+
+
+
+
+
+
+
+		</div>
+	</div>
 
 	<div class="row">
 		<div class="inline">
 			<h1>Images</h1>
 
-			<p>All images should be place inside figures. Use jpg, gif, or link from a CMS to the image as your image source. The following classes are a layout starting point that can be tweaked by adding an id or changed throughout the article by changing the class. For more options place a image inside a <code>figure</code> inside a column using the <a href="http://getbootstrap.com/css/#grid">bootstrap grid system</a>.</p>
+			<p>All images should be place inside a <code>figure</code>. Use jpg, gif, or link from a CMS to the image as your image source. The following classes are a layout starting point that can be tweaked by adding an id or changed throughout the article by changing the class. For more layout options place figure inside a column using the <a href="http://getbootstrap.com/css/#grid">bootstrap grid system</a>.</p>
 
 			
-			<h4>Inline image</h4>
+			<h3>Inline image</h3>
 			<p>All figures nested inside the <code>inline</code> column will display inline by default. </p>
 <pre>
 &lt;div class="inline&gt;
@@ -119,11 +228,11 @@
 &lt;/div &gt; 
 </pre>
 			<figure>
-				<img src="../img/test.jpg" alt="">
+				<img src="../img/test.jpg" alt="" data-lightbox="image-3" data-title="My caption">
 				<figcaption>Inline image caption</figcaption>
 			</figure>
 			
-			<h4>Inline-left</h4>
+			<h3>Inline-left</h3>
 			<p>The <code>inline-left</code> class applied to a figure creates an image 50% the width of the <code>inline</code> column aligned left. If there is nothing to the right of the figure, content lower on the page may wrap up and fill the blank space.</p>
 <pre>
 &lt;figure class="inline-left"&gt;
@@ -141,7 +250,7 @@
 			
 
 
-			<h4>inline-right</h4>
+			<h3>inline-right</h3>
 			<p>The <code>inline-right</code> class applied to a figure creates an image 50% the width of the <code>inline</code> column aligned right. If there is nothing to the left of the figure, content lower on the page may wrap up and fill the blank space.</p>
 
 <pre>
@@ -158,7 +267,7 @@
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare egestas mi at elementum. Curabitur consectetur magna congue, tempus ante malesuada, laoreet libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque tristique efficitur sagittis. Nullam at mi mi. Aenean libero quam, molestie sed magna non, maximus consectetur urna. Morbi mauris ipsum, bibendum eu risus sit amet, tristique faucibus risus. Nulla bibendum, purus ut sodales pellentesque, erat justo iaculis odio, sit amet pellentesque turpis felis sed elit.</p>
 			
-			<h4>narrow and centering</h4>
+			<h3>narrow and centering</h3>
 				<p>The figure class <code>narrow</code> will shrink the figure to 25% width. The class <code>center-block</code> will center align to the element it is nested in.</p>
 
 <pre>
@@ -175,7 +284,7 @@
 
 
 
-			<h4>Wide</h4>
+			<h3>Wide</h3>
 			<p>Apply the <code>wide</code> class to a figure to make it 150% width of its container. The figure below is contained in an <code>inline</code> class, so it is 150% the width of the main article.</p>
 <pre>
 &lt;figure class="wide"&gt;
@@ -189,7 +298,7 @@
 			</figure>	
 
 
-			<h4>Wide-left</h4>
+			<h3>Wide-left</h3>
 			<p>Apply the <code>wide-left</code> to a figure to make it 70% of the figure's normal width and aligned left.</p>
 <pre>
 &lt;figure class="wide-left"&gt;
@@ -204,7 +313,7 @@
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare egestas mi at elementum. Curabitur consectetur magna congue, tempus ante malesuada, laoreet libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque tristique efficitur sagittis. Nullam at mi mi. Aenean libero quam, molestie sed magna non, maximus consectetur urna. Morbi mauris ipsum, bibendum eu risus sit amet, tristique faucibus risus. Nulla bibendum, purus ut sodales pellentesque, erat justo iaculis odio, sit amet pellentesque turpis felis sed elit.</p>
 		
-			<h4>Wide-right</h4>
+			<h3>Wide-right</h3>
 			<p>Apply the <code>wide-right</code> to a figure to make it 70% of the figure's normal width and aligned right.</p>
 <pre>
 &lt;figure class="wide-right"&gt;
@@ -227,7 +336,7 @@
 
 	<div class="row break">
 	<div class="inline">
-		<h4>Break</h4>
+		<h3>Break</h3>
 		<p>Make an image 100% of the screen width by placing a figure inside a row without a column. If you want the height 100% crop the orginal image or hardcode a height value. If you want the figcaption to allign with the article column place it within an <code>inline</code> div</p>
 <pre>
 &lt;div class="row&gt;
@@ -257,7 +366,7 @@
 
 	<div class="row break-left">
 		<div class="inline">
-			<h4>Break-left</h4>
+			<h3>Break-left</h3>
 			<p>Apply the <code>break-left</code> class to a row containing an figure column and a caption column. Size use bootstrap grids.</p>
 <pre>
 &lt;div class="row break-left"&gt;
@@ -287,7 +396,7 @@
 
 	<div class="row break-right">
 	<div class="inline">
-			<h4>Break-right</h4>
+			<h3>Break-right</h3>
 			<p>Apply the <code>break-right</code> class to a row containing an figure column and a caption column. Size using bootstrap grids. Put a figcaption with the classes <code>visible-xs visible-sm</code> to the figure as well as a caption column with the classes <code>hidden-xs</code> and <code>hidden-sm</code></p>
 <pre>
 &lt;div class="row break-left"&gt;
@@ -322,7 +431,7 @@
 	<div class="row">
 		<div class="inline">
 
-			<h4>Carasoul</h4>
+			<h3>Carasoul</h3>
 			<p>Carousels are a <a href="http://getbootstrap.com/javascript/#carousel">bootstrap element</a>. They can be used <code>inline</code>, <code>wide</code>, custom grid structure, but does not work in <code>break</code>. Every caraousel needs a unique <code>id</code> for the wrapping div and controls.</p>
 <pre>
 &lt;div id="carousel-example-generic" class="carousel slide" data-ride="carousel"&gt;
@@ -446,7 +555,7 @@
 				  </a>
 			</div>
 			
-				<h4>grids</h4>
+				<h3>grids</h3>
 				<p>Use the <a href="http://getbootstrap.com/css/#grid">bootstrap grid system</a> for a custom  layout. To remove the padding caused by <a href="http://getbootstrap.com/css/#grid-nesting">nested columns</a>, wrap the columns in a <code>row grid</code> </p>
 <pre>
 &lt;div class="row grid"&gt;
@@ -626,7 +735,7 @@
 	<div class="row">
 	<div class="col-sm-8 col-sm-offset-2  col-md-6 col-md-offset-3">
 		
-		<h4>video</h4>
+		<h3>video</h3>
 		<figure>
 			<video width="100%" height="auto" controls>
 	  		<source src="media/testvideo.mp4" type="video/mp4">
@@ -634,7 +743,7 @@
 	  		<figcaption>You can substitue video for images in any figure like shown above</figcaption>
 	  	</figure>
 		
-		<h4>wide video</h4>
+		<h3>wide video</h3>
 		<figure class="wide">
 			<video width="100%" height="auto" controls>
 	  		<source src="media/testvideo.mp4" type="video/mp4">
@@ -642,7 +751,7 @@
 	  		<figcaption>Videos can also be positioned like images</figcaption>
 	  	</figure>
 
-		<h4>video play on scrollover</h4>
+		<h3>video play on scrollover</h3>
 		<video class="autoplay" preload="auto"  loop="loop">
 		<source src="media/testvideo.mp4" type="video/mp4">>
 		  
@@ -657,7 +766,7 @@
 		
 
 	<div class="col-sm-8 col-sm-offset-2  col-md-6 col-md-offset-3">
-			<h4>Pulled Quotes</h4>
+			<h3>Pulled Quotes</h3>
 
 			
 
@@ -774,7 +883,7 @@
 		
 
 		<div class="col-sm-8 col-sm-offset-2  col-md-6 col-md-offset-3">
-		<h4>static table</h4>
+		<h3>static table</h3>
 		<table>
 			    <thead>
 			        <tr>
@@ -816,16 +925,16 @@
 			    </tr>
 			</table>
 
-		<h4>gifs</h4>
-		<h4>video/youtube</h4>
-		<h4>audio/soundcloud</h4>
-		<h4>leaflet map</h4>
-		<h4>juxtapose</h4>
-		<h4>soundcite</h4>
-		<h4>more info</h4>
-		<h4>related content</h4>
-		<h4>highchart chart</h4>
-		<h4>dependencies</h4>
+		<h3>gifs</h3>
+		<h3>video/youtube</h3>
+		<h3>audio/soundcloud</h3>
+		<h3>leaflet map</h3>
+		<h3>juxtapose</h3>
+		<h3>soundcite</h3>
+		<h3>more info</h3>
+		<h3>related content</h3>
+		<h3>highchart chart</h3>
+		<h3>dependencies</h3>
 		</div>
 
 	</div> <!-- end of row  -->
@@ -833,18 +942,10 @@
 	
 </div> <!-- end of body container fluid -->
 
-<!-- <script src="js/jquery-2.1.4.min.js"></script>
- -->
-<!-- <script src="js/build/production.js"></script>
- -->
-<!-- <script src="js/bootstrap.min.js"></script>
- -->
-
-
 <script src="../js/production/app.min.js"></script>
-<!-- <script src="js/popup.js"></script>
-<script src="js/navcolorchange.js"></script> -->
-<script src="../js/navchange.js"></script>
+<script src="../js/lightbox-plus-jquery.min.js"></script>
+
+
 
 
 

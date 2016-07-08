@@ -32,7 +32,7 @@
 
 
 <figure class="img-responsive center-block lead-img">
-	<img src="../img/test.jpg"  alt="">
+	<img src="../img/test.jpg"  alt="" data-lightbox="image-1" data-title="My caption">
 	<h1>This is the first option to lead a story</h1>
 	<h2>With an optional subhead</h2>
 	<h6>By <a href="https://twitter.com/jamesgbenedict">James Benedict</h6></a>
@@ -84,7 +84,7 @@
 
 		</div>
 		<figure class="img-responsive center-block">
-			<img src="../img/test2.jpg"  alt="">
+			<img src="../img/test2.jpg"  alt="" data-lightbox="image-2" data-title="My caption">
 		</figure>
 	</div> <!-- end of intro row -->
 
@@ -164,18 +164,19 @@
 			<p>The template is here to streamline designing longform responsive articles. It is not a rigid style guide, rules here are meant to be broken. There are three general places to layout your content <code>inline</code>, <code>aside</code> and <code>break</code>. Each of these will be explained later in this section.</p>
 
 			<h3>Bootstap</h3>
-			<p>This template is developed ontop of bootstrap. If you are unfamilar, read their <a href="http://getbootstrap.com/css/">documentation</a> first. Essentially everything is built on a twelve column grid. You set any element's width by changing the number of columns you want it to span. You can also automatically change this number dependng on the size of the screen. For example <code>col-sm-12 col-md-6</code> will make an element the full width when the screen at a small size and half width when it is a medium size. There are four sizes, <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>. Bootstrap defaults to the smallest defined size, so if an element is <code>col-xs-12</code>, then it will be 12 columns at all sizes.</p>
+			<p>This template is developed ontop of bootstrap. If you are unfamilar, read their <a href="http://getbootstrap.com/css/">documentation</a> first. Essentially everything is built on a twelve column grid. You set any element's width by changing the number of columns you want it to span. You can also automatically change this number dependng on the size of the screen. For example <code>col-sm-12 col-md-6</code> will make an element the full width when the screen at a small size and half width when it is a medium size. There are four sizes, <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>. Bootstrap defaults to the smallest defined size, so if an element's only class is <code>col-xs-12</code>, then it will be 12 columns at all sizes.</p>
 
-			<p>You can also <a href="http://getbootstrap.com/css/#grid-nesting">nest</a> columns inside of each other. If I have an element that is always half the screen (6 columns), I can then nest something 12 columns wide inside that. This will make the second element always equal to the width of the first. If the second element had been set to six columns, it would be half the first element or a quarter of the page width.</p>
+			<p>You can also <a href="http://getbootstrap.com/css/#grid-nesting">nest</a> columns inside of each other. If we have an element that is always half the screen (6 columns), I can then nest something 12 columns wide inside that. This will make the second element always equal to the width of the first. If the second element had been set to six columns, it would be half the first element or a quarter of the page width.</p>
 
-			<p>Each group of columns is wrapped in a <code>row</code>. If I have two 12 column elements in one row they will be stacked ontop of each other. If I have two six column elements they will float left and fill one line. There is no limit on column inside a row. Tracking how things float around each other gets confusing, rows provide a way to organize columns you always want together.</p>
+			<p>Each group of columns is wrapped in a <code>row</code>. If I have two 12 column elements in one row they will be stacked ontop of each other. If I have two six column elements they will float left and fill one line. There are no limits on how many columns can be inside a row. Tracking how things float around each other gets confusing, rows provide a way to organize columns you always want together.</p>
 
 			<p>A group of rows is wrapped by the <code>container-fluid</code>. You will likely never have to modify this class because it is mainly used by bootstrap to help calculate the correct size all children elements should be. However, it also keeps things from going full screen. For some alignments below you will have to make sure you open and close the container fluid properly.</p>
 
 			<p>Bootstrap's grid has many more options than this, so if you are unfamiliar <a href="http://getbootstrap.com/css/">read the manual</a>. This package will already have bootstrap installed so you can skip the getting started page if you want.</p> 
 
 			<h3>Inline</h3>
-			<p>The main column that this text is in is call <code>inline</code>. It is the equivalent of <code>col-sm-8 col-sm-offset-2  col-md-6 col-md-offset-3</code> in bootstrap's grid, but takes less time to write. Throughout the rest of the documentation there will be plenty of options showing you inline elements, but the following code will demonstrate where the <code>inline</code> column goes in relation to the <code>row</code> and <code>container-fluid</code>.</p>
+			<p>The main column that this text is in is call <code>inline</code>. It is the equivalent of <code>col-sm-8 col-sm-offset-2  col-md-6 col-md-offset-3</code> in bootstrap's grid, but <code>inline</code> takes less time to write. Throughout the rest of the documentation there will be options showing you individual inline elements, but the following code will demonstrate where the <code>inline</code> column goes in relation to the <code>row</code> and <code>container-fluid</code>.</p>
+
 <pre>
 &lt;body&gt;
 ...navigation, lead image, etc...
@@ -197,7 +198,30 @@
 
 &lt;/body&gt;
 </pre>
+			
+			<h3>Asides</h3>
+			
+			<aside class="inline-left pulled-quote">
+				<h2>If you want a pulledquote tweetable, keep it + url under 140 characters </h2>
+				<h6>James Benedict</h6>
 
+				<div class="share">
+				<a href="https://twitter.com/intent/tweet?text=If%20you%20want%20a%20pulledquote%20tweetable%2C%20keep%20it%20%2B%20url%20under%20140%20characters%20http%3A%2F%2Fgoo.gl%2FTbPbCz" class="popup"><img src="../img/b.twitter.svg" alt=""></a>
+				<a href="http://www.facebook.com/sharer.php?u=http://jamesbenedict.info/" class ="popup">
+				<img src="../img/facebook.f.svg" alt=""></a>
+				<h5>Share this</h5>
+				</div>
+				<!-- for the auto tweet button you need to do a few things. If you don't have a unique url shortener, use google's here https://goo.gl/. Then use this website to format the text of your tweet and url for twitter http://meyerweb.com/eric/tools/dencoder. Now copy the the encoded text after this url https://twitter.com/intent/tweet?text= . Use that link for your site and make sure it has the id of popup or it will load the auto tweet on the same page as your article. Make sure the link tag </a> closes after your image or text.
+
+				facebook is  a little easier. First make sure the meta property info in the head is accurate for your story. Facebook will pull previews images and text from there. Next place the full url of your story after this http://www.facebook.com/sharer.php?u= and use that as the link. Like twitter make sure the link has a class of popup so it doesn't load over your article-->
+				
+			</aside>
+
+
+			<p></p>
+
+			<h3>Break</h3>
+			<p></p>
 
 
 
@@ -228,7 +252,7 @@
 &lt;/div &gt; 
 </pre>
 			<figure>
-				<img src="../img/test.jpg" alt="">
+				<img src="../img/test.jpg" alt="" data-lightbox="image-3" data-title="My caption">
 				<figcaption>Inline image caption</figcaption>
 			</figure>
 			
@@ -943,6 +967,8 @@
 </div> <!-- end of body container fluid -->
 
 <script src="../js/production/app.min.js"></script>
+<script src="../js/lightbox-plus-jquery.min.js"></script>
+
 
 
 

@@ -33,8 +33,8 @@ module.exports = function(grunt) {
 
       build: {
         files: [
-        {'dist/js/app.min.js': ['src/js/jquery-2.1.4.min.js', 'src/js/alignment.js', 'src/js/bootstrap.js', 'src/js/*.js']},
-        {'src/js/production/app.min.js': ['src/js/jquery-2.1.4.min.js', 'src/js/alignment.js', 'src/js/bootstrap.js', 'src/js/*.js']},
+        {'dist/js/app.min.js': ['src/js/jquery-2.1.4.min.js', 'src/js/alignment.js', 'src/js/bootstrap.js', 'src/js/popup.js', 'src/js/lightbox.min.js', 'src/js/lightbox-plus-jquery.min.js', 'src/js/*.js']},
+        {'src/js/production/app.min.js': ['src/js/jquery-2.1.4.min.js', 'src/js/alignment.js', 'src/js/bootstrap.js', 'src/js/popup.js', 'src/js/navchange.js', 'src/js/lightbox.min.js', 'src/js/lightbox-plus-jquery.min.js', 'src/js/*.js']},
         ],
       }
     },
@@ -45,8 +45,8 @@ module.exports = function(grunt) {
       },
       build: {
         files:[
-          {'dist/css/style.min.css': ['src/css/reset.css', 'src/css/bootstrap.css','src/css/style.css', 'src/css/navbar.css']},
-          {'src/css/production/style.min.css': ['src/css/reset.css', 'src/css/bootstrap.css','src/css/style.css', 'src/css/navbar.css']},
+          {'dist/css/style.min.css': ['src/css/reset.css', 'src/css/bootstrap.css','src/css/style.css', 'src/css/navbar.css', 'src/css/lightbox.css']},
+          {'src/css/production/style.min.css': ['src/css/reset.css', 'src/css/bootstrap.css','src/css/style.css', 'src/css/navbar.css', 'src/css/lightbox.css']},
         ],
       }
     },

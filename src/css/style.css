@@ -17,6 +17,7 @@ h1{
 	font-size: 4em;
 	font-weight: 900;
 	/*font-weight: 100*/
+	
 }
 
 h2{
@@ -31,7 +32,7 @@ h3{
 	font-size: 2em;
 	line-height: 1.5em;
 	margin-top: 1em;
-	font-weight: 400;
+	font-weight: 500;
 }
 
 h4{
@@ -118,7 +119,7 @@ b{
 .collapse.in{
     background-color:#f0f0f0 !important;
 }
-.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus;
 
 .spacer{
    background-color: transparent;   
@@ -161,7 +162,7 @@ figure{
 
 
 figure > img{
-	width: 100%;
+	width:100%;
 }
 
 figcaption{

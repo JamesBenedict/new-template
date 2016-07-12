@@ -1,0 +1,558 @@
+.col-md-6 {
+  margin-right: 10px;
+}
+
+html {
+  background-color: rgb(246, 247, 247);
+}
+
+/*fonts*/
+
+h2, h3, h4, h5, figcaption {
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 4em;
+  font-weight: 900;
+  /*font-weight: 100*/
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.5em;
+  font-weight: 300;
+  margin-top: .5em;
+}
+
+h3 {
+  font-size: 2em;
+  line-height: 1.5em;
+  margin-top: 1em;
+  font-weight: 400;
+}
+
+h4 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 2em;
+  font-weight: 900;
+}
+
+h5, figcaption {
+  font-size: 1.25em;
+}
+
+h6 {
+  opacity: .6;
+  font-size: 1em;
+  margin-bottom: 1em;
+  &.date {
+    opacity: .6;
+    font-size: .8em;
+    margin-bottom: 1.5em;
+  }
+}
+
+p {
+  font-family: 'lora', serif;
+  font-size: 18px;
+  line-height: 1.5em;
+  font-weight: 300;
+  margin-top: .5em;
+}
+
+aside p {
+  font-weight: bold;
+}
+
+a {
+  color: #337ab7;
+  &:hover {
+    color: #337ab7;
+  }
+}
+
+b {
+  font-weight: 900;
+}
+
+.dropcap {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 100;
+  float: left;
+  font-size: 4em;
+  line-height: .8em;
+  margin-top: .01em;
+  margin-right: .1em;
+  padding: 0;
+}
+
+/*end of fonts*/
+
+/*navbar*/
+
+.navbar-default {
+  background: transparent;
+  border-color: transparent;
+}
+
+/*.navbar-fixed-top{
+	border-bottom: 1px solid rgba(204,204,204, 0.8);
+	-webkit-box-shadow:0px 4px 4px rgba(204,204,204, 0.4);
+	-moz-box-shadow:0px 4px 4px rgba(204,204,204, 0.4);
+	box-shadow:0px 4px 4px rgba(204,204,204, 0.4);
+} */
+
+.navbar-nav > li > a:hover {
+  color: #1a1a1a;
+}
+
+.collapse.in {
+  background-color: #f0f0f0 !important;
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+  background-color: transparent;
+  height: 100px;
+  &:hover, &:focus .spacer {
+    background-color: transparent;
+    height: 100px;
+  }
+}
+
+nav {
+  text-align: center;
+}
+
+.navbar-right img {
+  height: 25px;
+}
+
+.navbar-brand img {
+  max-height: 25px;
+}
+
+.nav-headline {
+  font-family: 'roboto slab', serif;
+  font-size: 140%;
+  line-height: 50px;
+}
+
+/*end of navbar*/
+
+/*intro*/
+
+.intro {
+  margin-top: 100px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/*end of intro*/
+
+/*figures and images*/
+
+figure {
+  margin-top: 0em;
+  > img {
+    width: 100%;
+  }
+}
+
+figcaption {
+  margin-top: .75em;
+  margin-bottom: 1.5em;
+}
+
+.wide {
+  width: 100%;
+  margin-left: 0%;
+}
+
+.lead-img {
+  top: 0;
+  text-align: center;
+}
+
+.break {
+  margin-bottom: 0em;
+  margin-top: 1em;
+}
+
+.break-caption {
+  padding: 0em;
+}
+
+.break-left, .break-right {
+  margin-top: 2em;
+  margin-bottom: 4em;
+}
+
+.break-left * {
+  padding: 0 !important;
+  margin-top: 0em;
+}
+
+.break-right {
+  * {
+    padding: 0 !important;
+    margin-top: 0em;
+  }
+  > figure .break-right {
+    color: red;
+  }
+}
+
+.break-left figcaption {
+  margin-left: 2em;
+  margin-top: 1em;
+}
+
+.break-right figcaption {
+  margin-top: 1em;
+  margin-left: 0em;
+}
+
+/*end of figs and imgs*/
+
+/*article*/
+
+.article {
+  margin-top: 2em;
+}
+
+aside {
+  margin-top: 0em;
+  h6 {
+    margin-bottom: .5em;
+    margin-top: 1em;
+  }
+  &.pulled-quote {
+    margin-bottom: 2em;
+    margin-top: 0em;
+  }
+  h1 {
+    font-size: 1.5em;
+    margin-top: .5em;
+  }
+}
+
+.wide-left {
+  &.pulled-quote {
+    text-align: right;
+  }
+  > {
+    .share, h5 {
+      float: right;
+    }
+  }
+}
+
+.share {
+  img {
+    max-width: 25px;
+    height: auto;
+    margin-top: 0em;
+    margin-right: 5px;
+    float: left;
+  }
+  h5 {
+    padding-top: 5px;
+  }
+  a {
+    color: black;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  padding: 0;
+  margin: 0 0 11px 0;
+  width: 100%;
+  th {
+    text-align: left;
+    border-bottom: 2px solid #eee;
+    vertical-align: bottom;
+    padding: 0 10px 10px 10px;
+    text-align: right;
+  }
+  td {
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+    padding: 10px;
+    text-align: right;
+  }
+  th:nth-child(1), td:nth-child(1) {
+    text-align: left;
+    padding-left: 0;
+    font-weight: bold;
+  }
+}
+
+.inline-left > hr:first-child, .inline-right > hr:first-child {
+  margin-top: 1em;
+}
+
+.inline-left {
+  > .share {
+    float: right;
+  }
+  float: left;
+  width: 30%;
+  margin-right: .5em;
+  margin-top: 0em;
+  margin-right: 2.5em;
+  text-align: right;
+  h2 {
+    font-size: 1.25em;
+    margin-top: 0em;
+  }
+  > h5 {
+    width: 100%;
+    text-align: right;
+  }
+  h6 {
+    font-size: .75em;
+  }
+  > .share {
+    width: 100%;
+    img {
+      float: right;
+      margin-bottom: .5em;
+    }
+  }
+}
+
+.inline-right {
+  h2 {
+    font-size: 1.25em;
+    margin-top: 0em;
+  }
+  h6 {
+    font-size: .75em;
+  }
+  > .share {
+    width: 100%;
+    img {
+      float: left;
+      margin-bottom: .5em;
+    }
+  }
+}
+
+.share {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+@media screen and (max-width: 480px) {
+  /*This media query is only really useful for tables*/
+  table, tbody {
+    display: block;
+    width: 100%;
+  }
+  thead {
+    display: none;
+  }
+  table {
+    tr, th, td {
+      display: block;
+      padding: 0;
+      text-align: left;
+      white-space: normal;
+    }
+    tr {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 11px;
+      margin-bottom: 11px;
+    }
+    th[data-title]:before {
+      content: attr(data-title) ": ";
+      font-weight: bold;
+    }
+    td {
+      &[data-title]:before {
+        content: attr(data-title) ": ";
+        font-weight: bold;
+      }
+      border: none;
+      margin-bottom: 6px;
+      color: #444;
+      &:empty {
+        display: none;
+      }
+      &:first-child {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 6px;
+        color: #333;
+        &:before {
+          content: '';
+        }
+      }
+    }
+  }
+}
+
+br {
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 640px) {
+  .inline-left {
+    h2 {
+      font-size: 2em;
+      margin-top: 0em;
+    }
+    h6 {
+      font-size: 1em;
+    }
+    > .share {
+      width: 100%;
+      img {
+        float: right;
+        margin-bottom: .5em;
+      }
+    }
+  }
+  .inline-right {
+    h2 {
+      font-size: 2em;
+      margin-top: 0em;
+    }
+    h6 {
+      font-size: 1em;
+    }
+    > .share {
+      width: 100%;
+      img {
+        float: left;
+        margin-bottom: .5em;
+      }
+    }
+  }
+  .wide {
+    width: 150%;
+    margin-left: -25%;
+  }
+  .narrow {
+    width: 25%;
+  }
+  .inline-right {
+    float: right;
+    width: 30%;
+    margin-left: 2em;
+    margin-top: 1em;
+  }
+  aside.pulled-quote {
+    margin-bottom: 0em;
+    margin-top: 0em;
+  }
+  .grid {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    figcaption {
+      padding-left: 15px;
+    }
+    img {
+      margin-bottom: 1em;
+    }
+    figure figcaption {
+      padding-left: 0em;
+      margin-top: 0em;
+    }
+  }
+  .pulled-quote {
+    margin-top: 0em;
+    width: 30%;
+    > {
+      p {
+        margin-top: 1em;
+      }
+      h2 {
+        font-size: 1.5em;
+        line-height: 1.5em;
+        margin-top: 0em;
+      }
+    }
+  }
+  .wide-left.pulled-quote, .wide-right.pulled-quote {
+    width: 100%;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+  }
+  .sidebar-l, .sidebar-r {
+    display: none;
+  }
+  .break-left figcaption {
+    margin-right: 2em;
+    margin-top: 0em;
+  }
+  .break-right figcaption {
+    float: left;
+    margin-top: 0em;
+    margin-right: 2em;
+    margin-left: 0em;
+    text-align: right;
+  }
+  .pull-left {
+    float: left !important;
+  }
+  /*.left-c{
+  	float: ;
+  }*/
+  video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  .wide-left {
+    float: left;
+    width: 60%;
+    margin-left: -30%;
+    margin-right: 1em;
+  }
+  .wide-right {
+    float: right;
+    width: 60%;
+    margin-right: -30%;
+    margin-left: 2em;
+  }
+  .wide-left.pulled-quote {
+    width: 50%;
+    margin-bottom: 0em;
+    margin-top: 0em;
+  }
+  .wide-right.pulled-quote {
+    width: 60%;
+    margin-bottom: 0em;
+    margin-top: 0em;
+  }
+  .sidebar-l {
+    display: block;
+    padding-left: 15%;
+    padding-right: 2em;
+    width: 100%;
+  }
+  .sidebar-r {
+    display: block;
+    padding-right: 15%;
+    padding-left: 2em;
+    width: 100%;
+  }
+  .sidebar-align {
+    margin-right: 0px;
+  }
+  .break-right figcaption {
+    margin-left: 3em;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {}

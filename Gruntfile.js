@@ -17,6 +17,13 @@ module.exports = function(grunt) {
 
 
      // configure jshint to validate js files -----------------------------------
+    sass: {
+      dist: {
+        files: {
+          'src/css/style.css': 'src/css/*.scss'
+        }
+      }
+    },
     jshint: {
       options: {
         reporter: require('jshint-stylish') // use jshint-stylish to make our errors look and read good
@@ -33,8 +40,8 @@ module.exports = function(grunt) {
 
       build: {
         files: [
-        {'dist/js/app.min.js': ['src/js/jquery-2.1.4.min.js', 'src/js/alignment.js', 'src/js/bootstrap.js', 'src/js/popup.js', 'src/js/lightbox.min.js', 'src/js/lightbox-plus-jquery.min.js', 'src/js/*.js']},
-        {'src/js/production/app.min.js': ['src/js/jquery-2.1.4.min.js', 'src/js/alignment.js', 'src/js/bootstrap.js', 'src/js/popup.js', 'src/js/navchange.js', 'src/js/lightbox.min.js', 'src/js/lightbox-plus-jquery.min.js', 'src/js/*.js']},
+        {'dist/js/app.min.js': ['src/js/jquery-2.1.4.min.js', 'src/js/alignment.js', 'src/js/bootstrap.js', 'src/js/popup.js', 'src/js/navbar.js', 'src/js/lightbox.min.js', 'src/js/lightbox-plus-jquery.min.js', 'src/js/*.js']},
+        {'src/js/production/app.min.js': ['src/js/jquery-2.1.4.min.js', 'src/js/alignment.js', 'src/js/bootstrap.js', 'src/js/popup.js', 'src/js/navbar.js', 'src/js/lightbox.min.js', 'src/js/lightbox-plus-jquery.min.js', 'src/js/*.js']},
         ],
       }
     },
@@ -77,16 +84,21 @@ module.exports = function(grunt) {
         files: 'src/js/*.js', tasks: ['jshint', 'uglify'] 
       },
 
+      
+
       // scripts: { 
       //   files: ['src/**/*.html', 'src/**/*.png', 'src/**/*.svg', 'src/**/*.jpg', 'src/**/*.gif', 'src/**/*.mp4', 'src/**/*.mp3', 'src/font/**'], tasks: ['copy'],
       //   tasks: ['copy'] 
       // },
-
+      css: {
+        files: '**/*.scss',
+        tasks: ['sass']
+      }
     }
   });
 
   grunt.registerTask('default', ['uglify', 'cssmin', 'copy', 'watch']);
-  grunt.registerTask('dev', ['copy']);
+  grunt.registerTask('q', ['sass', 'uglify']);
 
 
 
@@ -101,6 +113,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-copy');
-
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
 };
